@@ -3,6 +3,5 @@
 <p>Author: <%= link_to @post.blogger.name, blogger_path(@post.blogger) %></p>
 <p>Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %></p>
 <%# like button %>
-<%= form_for @post do |f| %>
-<%= f.button_to :likes %>
-<% end %>
+<%= button_to "Like", like_path(@post) %>
+<%= @post.likes %>
